@@ -5,8 +5,6 @@ var numCells = input.value;
 var gridCells = numCells*numCells;
 
 function init() {
-        var numCells = input.value;
-        var gridCells = numCells*numCells;
         container.style.width = '0';
         container.innerHTML = '';
     for (var i = 0; i < gridCells; i++) {
@@ -35,6 +33,8 @@ function cellOver() {
 
 
 createBtn.addEventListener("click", function(){
+    var numCells = input.value;
+    var gridCells = numCells*numCells;
     init();
     createBtn.style.display = 'none';
     cellOver();
@@ -43,3 +43,5 @@ createBtn.addEventListener("click", function(){
 input.addEventListener("change", function(){
     createBtn.style.display = 'block';
 });
+
+

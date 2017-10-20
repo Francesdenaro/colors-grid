@@ -1,28 +1,61 @@
 body {
-    background-color: #292828
+    background-color: #292828;
 }
 
 .container {
-    margin: 10% auto;
+    margin: 6% auto;
+    padding-bottom: 20px;
+    height: 80%;
 }
 
 .cell {
-    height: 20px;
-    width: 20px;
     border: 1px solid black;
     display:block;
     margin:0;
     float: left;
+    height:20px;
+    width: 20px;
 }
 
-.create {
-    width: 33%;
-    margin: 10% auto;
-    -moz-margin: 10% auto;
-    height: 30px;
-    display: block;
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
 }
 
+@media only screen and (min-width: 800px){
+    .create {
+        width: 40%;
+        margin: 4% auto;
+        -moz-margin: 4% auto;
+        height: 30px;
+        display: block;
+    }
+    .create input,
+    .create button{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .create {
+        width: 60%;
+        margin: 4% auto;
+        -moz-margin: 4% auto;
+        height: 30px;
+        display: block;
+    }
+    .create input,
+    .create button{
+        width: 40%;
+    }
+
+    .create button {
+        line-height: 0.9;
+        font-size: 80%;
+    }
+}
 .create input, 
 .create button {
     display: block;
