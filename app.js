@@ -1,10 +1,8 @@
 var container = document.querySelector(".container");
 var input = document.querySelector("input");
 var createBtn = document.querySelector("button");
-var numCells = input.value;
-var gridCells = numCells*numCells;
 
-function init() {
+function init(numCells,gridCells) {
         container.style.width = '0';
         container.innerHTML = '';
     for (var i = 0; i < gridCells; i++) {
@@ -22,7 +20,7 @@ function randomColor() { //pick a random color and assign it to a cell
     return color;
 }
 
-function cellOver() {
+function cellOver(gridCells) {
     var cell = document.querySelectorAll(".cell");
     for(var i = 0; i < gridCells; i++) {
         cell[i].addEventListener("mouseover", function(){
@@ -35,9 +33,9 @@ function cellOver() {
 createBtn.addEventListener("click", function(){
     var numCells = input.value;
     var gridCells = numCells*numCells;
-    init();
+    init(numCells,gridCells);
     createBtn.style.display = 'none';
-    cellOver();
+    cellOver(gridCells);
 });
 
 input.addEventListener("change", function(){
